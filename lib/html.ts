@@ -8,6 +8,7 @@
  * const user = { name: "John" };
  * const page = html`<h1>Hello ${user.name}</h1>`;
  */
-export function html(strings: TemplateStringsArray, ...values: any[]) {
+import type { HTML_Value } from "../lib/types.ts";
+export function html(strings: TemplateStringsArray, ...values: HTML_Value[]) {
   return String.raw(strings, ...values);
 }
