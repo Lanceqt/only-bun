@@ -1,7 +1,8 @@
 // Entry point & server.
 
-import testing from "./routes/testing.html";
 import { render_user_page } from "./routes/another-test.ts";
+import testing from "./routes/testing.html";
+
 try {
   const server = Bun.serve({
     port: 3000,

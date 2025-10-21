@@ -16,4 +16,5 @@ This project was created using `bun init` in bun v1.3.0. [Bun](https://bun.com) 
 
 # Authors note
 
-Inspired by a discussion on the [DSU](https://discord.gg/BGJxKWZQtk) Discord server & a [video](https://youtu.be/dSIgEJSi0rY) by Theo
+Inspired by a discussion on the [DSU](https://discord.gg/BGJxKWZQtk) Discord server & a [video](https://youtu.be/dSIgEJSi0rY) by Theo.
+We are only using Bun, hence the name only-bun
