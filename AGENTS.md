@@ -104,3 +104,7 @@ bun --hot ./index.ts
 ```
 
 For more information, read the Bun API docs in `node_modules/bun-types/docs/**.md`.
+
+Use Context7 to look up any documentation needs.
+This project is being build using only Bun no other dependencies
+Docs for CSS design system in DROP-IN.md in the root of this project

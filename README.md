@@ -23,3 +23,4 @@ We are only using Bun, hence the name only-bun.
 
 * Making your own template literal, you can get syntax highlighting but no auto complete you gotta opt. in to jsx or tsx for a nice templating feature but that's out of scope.
 suggested fix would be a simple jsx/tsx parser build into bun that does not need React or similiar things installed.
+* No build in markdown parser

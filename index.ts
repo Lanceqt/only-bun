@@ -2,18 +2,21 @@
 
 import { render_user_page } from "./routes/another-test.ts";
 import testing from "./routes/testing.html";
+import layout from "./routes/layout.html";
 
 try {
   const server = Bun.serve({
     port: 3000,
     routes: {
       "/": testing,
-      "/another": () =>
-        new Response(render_user_page({ name: "foo", email: "foo" }), {
+      "/layout": layout,
+      "/another": () => {
+        return new Response(render_user_page({ name: "foo", email: "foo" }), {
           headers: {
             "Content-Type": "text/html",
           },
-        }),
+        });
+      },
       "/test/:id": (req) => {
         return new Response(`Hello ${req.params.id}!`);
       },
