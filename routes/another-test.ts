@@ -1,4 +1,5 @@
 import { html } from "../lib/html";
+import type { HTML_Value } from "../lib/types";
 
 export function render_user_page(user: { name: string; email: string }) {
   function output_posts() {

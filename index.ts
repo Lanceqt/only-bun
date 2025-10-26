@@ -1,8 +1,9 @@
 // Entry point & server.
 
 import { render_user_page } from "./routes/another-test.ts";
-import testing from "./routes/testing.html";
 import layout from "./routes/layout.html";
+import testing from "./routes/testing.html";
+import { counter } from "./routes/counter.ts";
 
 try {
   const server = Bun.serve({
@@ -12,6 +13,13 @@ try {
       "/layout": layout,
       "/another": () => {
         return new Response(render_user_page({ name: "foo", email: "foo" }), {
+          headers: {
+            "Content-Type": "text/html",
+          },
+        });
+      },
+      "/counter": () => {
+        return new Response(counter()), {
           headers: {
             "Content-Type": "text/html",
           },
