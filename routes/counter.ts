@@ -1,6 +1,6 @@
 import { html } from "../lib/html";
 
-//function backend_counter() {}
+function backend_counter(count: number) {}
 
 export function counter() {
   return html`

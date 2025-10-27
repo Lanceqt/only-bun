@@ -19,7 +19,7 @@ try {
         });
       },
       "/counter": () => {
-        return new Response(counter()), {
+        return new Response(counter(), {
           headers: {
             "Content-Type": "text/html",
           },
