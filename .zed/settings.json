@@ -1,0 +1,45 @@
+// Folder-specific settings
+//
+// For a full list of overridable settings, and general information on folder-specific settings,
+// see the documentation: https://zed.dev/docs/configuring-zed#settings-files
+{
+	"languages": {
+		"JavaScript": {
+			"language_servers": ["vtsls", "biome"],
+			"formatter": { "language_server": { "name": "biome" } },
+			"prettier": { "allowed": false }
+		},
+		"TypeScript": {
+			"language_servers": ["vtsls", "biome"],
+			"formatter": { "language_server": { "name": "biome" } },
+			"prettier": { "allowed": false }
+		},
+		"TSX": {
+			"language_servers": ["vtsls", "biome"],
+			"formatter": { "language_server": { "name": "biome" } },
+			"prettier": { "allowed": false }
+		},
+		"JSON": {
+			"language_servers": ["json-language-server", "biome"],
+			"formatter": { "language_server": { "name": "biome" } },
+			"prettier": { "allowed": false }
+		},
+		"JSONC": {
+			"language_servers": ["json-language-server", "biome"],
+			"formatter": { "language_server": { "name": "biome" } },
+			"prettier": { "allowed": false }
+		},
+		"CSS": {
+			"language_servers": ["vscode-css-language-server", "biome"],
+			"formatter": { "language_server": { "name": "biome" } },
+			"prettier": { "allowed": false }
+		},
+		"HTML": {
+			"language_servers": ["vscode-html-language-server", "biome"],
+			"prettier": { "allowed": false },
+			"formatter": {
+				"language_server": { "name": "biome" }
+			}
+		}
+	}
+}
