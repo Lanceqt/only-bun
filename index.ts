@@ -1,6 +1,4 @@
 // Entry point & server.
-import index from "./routes/index.html";
-
 try {
 	const server = Bun.serve({
 		port: 3000,
