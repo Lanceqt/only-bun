@@ -1,7 +1,6 @@
-// if (import.meta.path === Bun.main) {
-// 	console.error("Fatal: Execution of this script directly is not permitted.");
-// 	process.exit(1);
-// }
+import { assert_not_run_directly } from "./utils";
+
+assert_not_run_directly(import.meta.path);
 
 const router = new Bun.FileSystemRouter({
 	style: "nextjs",

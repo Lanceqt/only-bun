@@ -21,6 +21,8 @@ We only use Bun—hence the name only-bun.
 * A bit of a cop-out, but I really wanna use Signals, and implementing it myself—with all the footguns—was not it for me right now. So we have one dependency so far: Alien-Signals.
 If we are gonna use dependencies, they should be like Alien-Signals: low-level stuff with no dependencies, in their own package.
 
+* Naming: Prefer snake_case over camelCase. I'm not dyslexic, but many people are, and we should strive for conventions that work better for them; snake_case tends to be easier to parse.
+
 ## Current limitations I've run into
 
 * If you make your own template literal, you can get syntax highlighting but no autocomplete—you gotta opt in to JSX or TSX for a nice templating feature, but that's out of scope.
