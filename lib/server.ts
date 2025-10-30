@@ -1,3 +1,8 @@
+// if (import.meta.path === Bun.main) {
+// 	console.error("Fatal: Execution of this script directly is not permitted.");
+// 	process.exit(1);
+// }
+
 const router = new Bun.FileSystemRouter({
 	style: "nextjs",
 	dir: `${import.meta.dir}/../routes`,

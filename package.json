@@ -13,6 +13,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@drop-in/graffiti": "^1.0.0"
+    "@drop-in/graffiti": "^1.0.0",
+    "alien-signals": "^3.0.3"
   }
 }
