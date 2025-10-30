@@ -16,15 +16,29 @@ This project was created using `bun init` in Bun v1.3.0. [Bun](https://bun.com) 
 
 ## Author's note
 
-Inspired by a discussion on the [DSU](https://discord.gg/BGJxKWZQtk) Discord server (a server for Danish software developers) and a [video](https://youtu.be/dSIgEJSi0rY) by Theo.
-We only use Bun—hence the name only-bun.
-* A bit of a cop-out, but I really wanna use Signals, and implementing it myself—with all the footguns—was not it for me right now. So we have one dependency so far: Alien-Signals.
-If we are gonna use dependencies, they should be like Alien-Signals: low-level stuff with no dependencies, in their own package.
+Inspired by a discussion on the [DSU](https://discord.gg/BGJxKWZQtk) Discord server (a server for Danish software developers) and a [video](https://youtu.be/dSIgEJSi0rY) by Theo. We only use Bun—hence the name only-bun.
 
-* Naming: Prefer snake_case over camelCase. I'm not dyslexic, but many people are, and we should strive for conventions that work better for them; snake_case tends to be easier to parse.
+Principles
+- Bun-first: prefer Bun’s built-ins and APIs before reaching for external tools.
+- Minimal dependencies: add only small, focused, dependency-free primitives.
+
+Why KitaJS for JSX
+- Type-safe ergonomics: @kitajs/html with @kitajs/ts-html-plugin provides TypeScript-aware JSX with autocomplete and useful errors that template literals can’t.
+- Minimal runtime: compiles JSX to plain functions/strings—no React, no VDOM, no client framework.
+- Performant: most work happens at compile time; the output is lean.
+- Bun-friendly: integrates cleanly with Bun’s toolchain—no extra bundlers or servers.
+
+Why Alien‑Signals
+- Focused reactivity: fine-grained signals without a framework, ideal for sprinkling reactivity where it’s actually needed.
+- Minimal and dependency-free: tiny surface area with zero transitive deps—easy to audit and reason about.
+- Server/edge ready: works in simple Bun contexts without assuming a browser-first runtime.
+- Philosophical fit: aligns with the Bun-first, minimal, and performant goals of this project.
+
+Conventions
+- Naming: Prefer snake_case over camelCase for readability and accessibility.
 
 ## Current limitations I've run into
 
-* If you make your own template literal, you can get syntax highlighting but no autocomplete—you gotta opt in to JSX or TSX for a nice templating feature, but that's out of scope.
-Suggested fix would be a simple JSX/TSX parser built into Bun that does not need React or similar things installed.
-* No built-in Markdown parser
+* Bun doesn’t include a built-in JSX/TSX solution. We use @kitajs/html with @kitajs/ts-html-plugin to get typed JSX that compiles to plain functions at build time (no React required).
+* No built-in Markdown parser.
+* Reactivity isn’t built in; we use Alien‑Signals for a tiny, framework-free signals primitive.
