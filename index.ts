@@ -1,9 +1,11 @@
+import { Home } from "./routes/test";
+
 // Entry point & server.
 try {
 	const server = Bun.serve({
 		port: 3000,
 		routes: {
-			"/": index,
+			"/": Home,
 		},
 		development: true,
 	});
