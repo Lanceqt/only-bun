@@ -5,9 +5,8 @@
 		"target": "ESNext",
 		"module": "Preserve",
 		"moduleDetection": "force",
-		"jsx": "react",
-		"jsxFactory": "Html.createElement",
-		"jsxFragmentFactory": "Html.Fragment",
+		"jsx": "react-jsx",
+		"jsxImportSource": "@kitajs/html",
 		"plugins": [{ "name": "@kitajs/ts-html-plugin" }],
 		"allowJs": true,
 
