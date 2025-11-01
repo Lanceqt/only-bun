@@ -3,8 +3,23 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Document</title>
-		<link rel="stylesheet" href="common/styles.css">
+		<title>UserCard</title>
 	</head>
-	<body></body>
+	<body>
+		<div id="app"></div>
+		<script type="module">
+		import "@drop-in/graffiti";
+		import { UserCard } from "./test.tsx";
+
+		const now = new Date();
+		const userCard = UserCard({
+			name: "Ada Lovelace",
+			description: "Pioneer of computing.",
+			date: now,
+			about: "First computer programmer.",
+		});
+
+		document.getElementById("app").appendChild(userCard);
+		</script>
+	</body>
 </html>
