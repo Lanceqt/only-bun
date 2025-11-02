@@ -1,4 +1,4 @@
-import index from "./routes/index.html";
+import index from "./routes/kita-test/index.html";
 
 try {
 	const server = Bun.serve({
