@@ -6,7 +6,10 @@ try {
 		routes: {
 			"/": index,
 		},
-		development: true,
+		development: {
+			hmr: true,
+			console: true,
+		},
 	});
 
 	const green_color = Bun.color("#0ADD08", "ansi");
